@@ -1,5 +1,5 @@
-{% set version = "1.2" %}
-{% set sha256 = "7960e1dfdf20d127e75ead931476f2b5c7556df05b117a73880b22ade17d1abc" %}
+{% set version = "21.6.14" %}
+{% set sha256 = "9de87a427c9a449eee7913472fb9ed03b63036295547369fdbf95f76a8b924b2" %}
 
 package:
   name: license-expression
@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -34,8 +34,7 @@ about:
     - apache-2.0.LICENSE
     - src/license_expression/_pyahocorasick.ABOUT
   summary: >
-    license-expression is small utility library to parse, compare, simplify and normalize
-    license expressions (such as SPDX license expressions) using boolean logic.
+    license-expression is small utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
   doc_url: https://github.com/nexB/license-expression
   dev_url: https://github.com/nexB/license-expression
 
