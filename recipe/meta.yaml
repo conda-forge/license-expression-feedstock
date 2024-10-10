@@ -1,13 +1,12 @@
-{% set version = "30.1.1" %}
-{% set sha256 = "42375df653ad85e6f5b4b0385138b2dbea1f5d66360783d8625c3e4f97f11f0c" %}
+{% set version = "30.3.1" %}
 
 package:
   name: license-expression
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/l/license-expression/license-expression-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/l/license-expression/license_expression-{{ version }}.tar.gz
+  sha256: 60d5bec1f3364c256a92b9a08583d7ea933c7aa272c8d36d04144a89a3858c01
 
 build:
   number: 0
@@ -17,10 +16,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - setuptools
+    - python >=3.8
   run:
     - boolean.py >=4.0.0
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
