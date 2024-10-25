@@ -149,4 +149,5 @@ Feedstock Maintainers
 =====================
 
 * [@mbargull](https://github.com/mbargull/)
+* [@xhochy](https://github.com/xhochy/)
 
