@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/l/license-expression/license_expression-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/l/license-expression/license_expression-{{ version }}.tar.gz
   sha256: 6464397f8ed4353cc778999caec43b099f8d8d5b335f282e26a9eb9435522f05
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -17,12 +17,14 @@ requirements:
   host:
     - pip
     - setuptools
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - boolean.py >=4.0.0
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - license_expression
 
