@@ -1,4 +1,4 @@
-{% set version = "30.4.1" %}
+{% set version = "30.4.2" %}
 
 package:
   name: license-expression
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/license-expression/license_expression-{{ version }}.tar.gz
-  sha256: 9f02105f9e0fcecba6a85dfbbed7d94ea1c3a70cf23ddbfb5adf3438a6f6fce0
+  sha256: 0b6e67dab0e7047c5ae61124d003baf86bd13ff9523e09c1ca81a504d8a444f9
 
 build:
   number: 0
