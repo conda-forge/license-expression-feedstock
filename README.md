@@ -9,7 +9,6 @@ Package license: Apache-2.0
 
 Summary: license-expression is small utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
 
-
 Development: https://github.com/nexB/license-expression
 
 Documentation: https://github.com/nexB/license-expression
