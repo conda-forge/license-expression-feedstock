@@ -1,35 +1,37 @@
-{% set version = "30.4.2" %}
+schema_version: 1
+
+context:
+  version: 30.4.2
 
 package:
   name: license-expression
-  version: {{ version }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/l/license-expression/license_expression-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/l/license-expression/license_expression-${{ version }}.tar.gz
   sha256: 0b6e67dab0e7047c5ae61124d003baf86bd13ff9523e09c1ca81a504d8a444f9
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
     - setuptools
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
   run:
     - boolean.py >=4.0.0
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - license_expression
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - license_expression
 
 about:
-  home: https://github.com/nexB/license-expression
   license: Apache-2.0
   license_file:
     - NOTICE
@@ -37,8 +39,9 @@ about:
     - src/license_expression/_pyahocorasick.ABOUT
   summary: >
     license-expression is small utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
-  doc_url: https://github.com/nexB/license-expression
-  dev_url: https://github.com/nexB/license-expression
+  homepage: https://github.com/nexB/license-expression
+  repository: https://github.com/nexB/license-expression
+  documentation: https://github.com/nexB/license-expression
 
 extra:
   recipe-maintainers:
