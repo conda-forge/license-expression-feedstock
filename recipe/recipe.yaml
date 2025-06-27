@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 30.4.2
+  version: "30.4.3"
 
 package:
   name: license-expression
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/license-expression/license_expression-${{ version }}.tar.gz
-  sha256: 0b6e67dab0e7047c5ae61124d003baf86bd13ff9523e09c1ca81a504d8a444f9
+  sha256: 49f439fea91c4d1a642f9f2902b58db1d42396c5e331045f41ce50df9b40b1f2
 
 build:
   number: 0
